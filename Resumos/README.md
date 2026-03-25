@@ -29,3 +29,16 @@
   * `git push origin main`
 * **git pull**: Puxa e atualiza o seu código local com as novidades que estão no servidor do GitHub.
   * `git pull origin main`
+
+  ---
+
+### 🚨 Comandos de "Emergência" e Ajustes
+* **git restore --staged**: Tira um arquivo da área de preparação (Stage) se você deu `git add .` por engano.
+  * `git restore --staged nome-do-arquivo.extensao`
+* **git remote -v**: Lista o endereço do servidor (GitHub) para onde o seu PC está enviando o código.
+  * `git remote -v`
+* **git commit --amend**: Permite alterar a mensagem do seu último commit local (se você escreveu algo errado antes de dar o push).
+  * `git commit --amend -m "Nova mensagem correta"`
+
+---
+
