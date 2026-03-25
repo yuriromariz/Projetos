@@ -22,9 +22,9 @@ Minha formação em ADS me deu a base teórica, e agora estou focado em transfor
 * **Ferramentas & Tecnologias:** .NET (C#), Git, GitHub, VS Code, Cursor e Replit.
 
 ## 📁 Organização do Repositório
-* `/estudos-csharp`: Exercícios de lógica, variáveis e fundamentos que estou fazendo no bootcamp.
-* `/resumos`: Meus guias de comandos Git e anotações de aula para consulta rápida.
-* `/projeto-mimo`: Onde estou tentando "desconstruir" o app que vi no Mimo para entender como ele funciona por dentro.
+* [Estudos C#](./estudos-csharp): Exercícios de lógica, variáveis e fundamentos que estou fazendo no bootcamp.
+* [Resumos](./resumos): Meus guias de comandos Git e anotações de aula para consulta rápida.
+* [Projeto Mimo](./projeto-mimo): Onde estou tentando "desconstruir" o app que vi no Mimo para entender como ele funciona por dentro.
 
 ---
 **"Um passo de cada vez, mas todos os dias."** 📫 Contato: [yuriromariz@gmail.com](mailto:yuriromariz@gmail.com)
