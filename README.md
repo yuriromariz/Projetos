@@ -23,7 +23,7 @@ Minha formação em ADS me deu a base teórica, e agora estou focado em transfor
 
 ## 📁 Organização do Repositório
 * [Estudos C#](./estudos-csharp): Exercícios de lógica, variáveis e fundamentos que estou fazendo no bootcamp.
-* [Resumos](./resumos): Meus guias de comandos Git e anotações de aula para consulta rápida.
+* [Resumos](./Resumos): Meus guias de comandos Git e anotações de aula para consulta rápida.
 * [Projeto Mimo](./projeto-mimo): Onde estou tentando "desconstruir" o app que vi no Mimo para entender como ele funciona por dentro.
 
 ---
