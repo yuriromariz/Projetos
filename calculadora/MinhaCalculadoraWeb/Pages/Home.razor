@@ -1,0 +1,65 @@
+﻿@page "/"
+@using Calculadora.models
+
+<PageTitle>Calculadora do Yuri</PageTitle>
+
+<div class="container" style="text-align: center; padding-top: 30px; font-family: sans-serif;">
+    <h1 style="color: #333;">Calculadora Web do Yuri</h1>
+    <p>Projeto Real: Lógica C# + Interface Blazor</p>
+
+    <div style="margin-bottom: 20px;">
+        <input type="number" @bind="num1" placeholder="Número ou Ângulo"
+               style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 150px;" />
+        
+        <span style="font-size: 20px; margin: 0 10px;">e</span>
+        
+        <input type="number" @bind="num2" placeholder="Número 2 (opcional)"
+               style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 150px;" />
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <button class="btn btn-primary" @onclick="Somar" style="width: 60px;"> + </button>
+        <button class="btn btn-primary" @onclick="Subtrair" style="width: 60px;"> - </button>
+        <button class="btn btn-primary" @onclick="Multiplicar" style="width: 60px;"> * </button>
+        <button class="btn btn-primary" @onclick="Dividir" style="width: 60px;"> / </button>
+        <button class="btn btn-primary" @onclick="Potencializar" style="width: 60px;"> ^ </button>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <button class="btn btn-info" @onclick="CalcularSeno" style="width: 80px; color: white;"> Seno </button>
+        <button class="btn btn-info" @onclick="CalcularCoseno" style="width: 80px; color: white;"> Cos </button>
+        <button class="btn btn-info" @onclick="CalcularTangente" style="width: 80px; color: white;"> Tan </button>
+        <button class="btn btn-info" @onclick="CalcularRaizQuadrada" style="width: 80px; color: white;"> √ </button>
+    </div>
+
+    <div
+        style="background-color: #f1f3f5; padding: 20px; border-radius: 15px; border: 2px solid #dee2e6; display: inline-block; min-width: 300px;">
+        <h4 style="margin: 0; color: #666;">Resultado:</h4>
+        <h2 style="color: #0d6efd; margin: 10px 0;">@resultado</h2>
+    </div>
+</div>
+
+@code {
+    private double num1;
+    private double num2;
+    private string resultado = "Aguardando...";
+
+    CalculadoraBasica calc = new CalculadoraBasica();
+
+    void Somar() => resultado = calc.Somar(num1, num2).ToString();
+    void Subtrair() => resultado = calc.Subtrair(num1, num2).ToString();
+    void Multiplicar() => resultado = calc.Multiplicar(num1, num2).ToString();
+    
+    void Dividir()
+    {
+        if (num2 == 0) resultado = "Erro: Divisão por zero!";
+        else resultado = calc.Dividir(num1, num2).ToString();
+    }
+
+    void Potencializar() => resultado = calc.Potencializar(num1, num2).ToString();
+
+    void CalcularSeno() => resultado = calc.Seno(num1).ToString();
+    void CalcularCoseno() => resultado = calc.Coseno(num1).ToString();
+    void CalcularTangente() => resultado = calc.Tangente(num1).ToString();
+    void CalcularRaizQuadrada() => resultado = calc.RaizQuadrada(num1).ToString();
+}
